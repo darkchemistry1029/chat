@@ -1,0 +1,20 @@
+<div id="list">
+  <p><iframe id="iframe" src="data.txt" frameborder="0" height="400"
+      width="95%"></iframe></p>
+</div>
+    <script>
+        window.setInterval(function() {
+            reloadIFrame()
+        }, 1000);
+
+        function reloadIFrame() {
+            console.log('reloading..');
+            document.getElementById('iframe').contentWindow.location.reload();
+        }
+    </script>
+<form action="save.php" name="myform" method="post" target="_blank">
+
+<p>Nickname:</p><textarea class="textBox" name="fourm1">Anonymous</textarea><p></br>Message:</p>
+<textarea class="textBox" name="mytext"></textarea>
+<input type="submit" class="save" value="send">
+</form>
